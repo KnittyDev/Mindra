@@ -15,11 +15,11 @@ Start your day with positivity and mindfulness. Mindra provides daily motivation
 
 ## Screenshots 📸
 
-| Home Screen | Themes | Favorites |
+| Home Screen | Profile | Themes |
 |:---:|:---:|:---:|
 | <img src="assets/images/Screenshot_1768480512.png" width="250" /> | <img src="assets/images/Screenshot_1768480517.png" width="250" /> | <img src="assets/images/Screenshot_1768480522.png" width="250" /> |
 
-| Profile | Notification Settings | Premium |
+| Premium | Favorites | Notification Settings |
 |:---:|:---:|:---:|
 | <img src="assets/images/Screenshot_1768480527.png" width="250" /> | <img src="assets/images/Screenshot_1768480538.png" width="250" /> | <img src="assets/images/Screenshot_1768480551.png" width="250" /> |
 
