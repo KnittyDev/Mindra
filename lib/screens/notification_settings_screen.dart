@@ -242,7 +242,12 @@ class _NotificationSettingsScreenState extends State<NotificationSettingsScreen>
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(Icons.wb_sunny_outlined, color: Color(0xFFE2B969)),
+                      Icon(
+                        _startTime.hour >= 6 && _startTime.hour < 18
+                            ? Icons.wb_sunny_outlined
+                            : Icons.nightlight_round,
+                        color: const Color(0xFFE2B969),
+                      ),
                       const SizedBox(width: 16),
                       Text(
                         _startTime.format(context),
