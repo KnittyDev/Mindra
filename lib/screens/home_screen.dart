@@ -3,6 +3,7 @@ import '../models/quote.dart';
 import '../data/quotes_data.dart';
 import '../widgets/quote_card.dart';
 import '../widgets/action_buttons.dart';
+import '../services/purchase_service.dart';
 import 'profile_screen.dart';
 import 'premium_screen.dart';
 
@@ -99,12 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       child: IconButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const PremiumScreen(),
-                            ),
-                          );
+                          PurchaseService().showPaywall();
                         },
                         icon: const Icon(
                           Icons.workspace_premium_outlined,

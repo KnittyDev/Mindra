@@ -6,6 +6,7 @@ import '../services/notification_service.dart';
 import 'themes_screen.dart';
 import 'favorites_screen.dart';
 import 'notification_settings_screen.dart';
+import '../services/purchase_service.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -136,6 +137,27 @@ class ProfileScreen extends StatelessWidget {
               icon: Icons.settings_outlined,
               title: 'Settings',
             ),
+            const SizedBox(height: 8),
+            
+            _SettingsTile(
+              icon: Icons.restore_outlined,
+              title: 'Restore Purchases',
+              onTap: () async {
+                 await PurchaseService().restorePurchases();
+                 ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Purchases restored successfully')),
+                 );
+              },
+            ),
+            const SizedBox(height: 8),
+             _SettingsTile(
+              icon: Icons.subscriptions_outlined,
+              title: 'Manage Subscription',
+              onTap: () {
+                 PurchaseService().showCustomerCenter();
+              },
+            ),
+            
             const SizedBox(height: 8),
             const _SettingsTile(
               icon: Icons.star_outline,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'services/purchase_service.dart';
 import 'services/notification_service.dart';
 import 'theme/app_theme.dart';
 import 'screens/home_screen.dart';
@@ -26,6 +27,13 @@ void main() async {
     await notificationService.scheduleDailyNotification();
   } catch (e) {
     debugPrint('Error initializing notifications: $e');
+  }
+
+  // Initialize RevenueCat
+  try {
+    await PurchaseService().init();
+  } catch (e) {
+    debugPrint('Error initializing RevenueCat: $e');
   }
 
   runApp(const MindraApp());
